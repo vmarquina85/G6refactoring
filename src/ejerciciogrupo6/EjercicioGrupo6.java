@@ -12,9 +12,12 @@ import java.io.FileWriter;
  *
  * @author Administrator
  */
-public class EjercicioGrupo6 {
-    public void saludarAlumno(String nombre,String apellido,String telefono,String direccion,int edad){
-         String saludo= "Hola " + nombre +" "+ apellido +" tu telefono es:" + telefono +" tu direccion es:" + direccion + " tienes " +edad +" años";
+public class EjercicioGrupo6   {
+
+    
+    public void saludarAlumno(){
+            alumno estudiante = new alumno("victor","Marquina","955333011",31,"calle los laureles");
+         String saludo= "Hola " + estudiante.getNombre() +" "+ estudiante.getApellido() +" tu telefono es:" + estudiante.getTelefono() +" tu direccion es:" + estudiante.getDireccion() + " tienes " +estudiante.getEdad() +" años";
         
         try
 {
@@ -41,7 +44,7 @@ System.out.println("Error al escribir");
     public static void main(String[] args) {
         EjercicioGrupo6 ejercicio= new EjercicioGrupo6();
         
-   ejercicio.saludarAlumno("Stefanny","Poma","955333011","calle los laureles",20);
+   ejercicio.saludarAlumno();
     }
     
 }
